@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radial_gradient_bg"
+    android:paddingTop="@dimen/x44"
+    android:paddingRight="@dimen/x31"
+    android:paddingLeft="@dimen/x40"
+    android:paddingBottom="@dimen/x44"
+    tools:context="com.nl.treadmilllauncher.ui.SportSummaryActivity">
+    
+    <ImageView
+        android:layout_width="@dimen/x77"
+        android:layout_height="@dimen/x169"
+        android:background="@mipmap/sport_summary_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/summary_finish_ib"
+        android:layout_width="@dimen/x77"
+        android:layout_height="@dimen/x77"
+        android:background="@mipmap/summary_finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <include
+        android:id="@+id/sport_summary_abstract"
+        layout="@layout/sport_summary_abstract_layout"
+        android:layout_width="@dimen/x360"
+        android:layout_height="@dimen/x306"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/data_sync"/>
+
+    <include
+        android:id="@+id/data_sync"
+        layout="@layout/data_sync_layout"
+        android:layout_width="@dimen/x360"
+        android:layout_height="@dimen/x306"
+        android:layout_marginTop="@dimen/x20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sport_summary_abstract"/>
+
+    <include
+        android:id="@+id/heart_rate_data_item"
+        layout="@layout/summary_item_layout"
+        android:layout_width="@dimen/x233"
+        android:layout_height="@dimen/x197"
+        android:layout_marginStart="@dimen/x20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/speed_data_item"
+        app:layout_constraintLeft_toRightOf="@id/sport_summary_abstract"/>
+
+    <include
+        android:id="@+id/speed_data_item"
+        layout="@layout/summary_item_layout"
+        android:layout_width="@dimen/x233"
+        android:layout_height="@dimen/x197"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        app:layout_constraintTop_toBottomOf="@id/heart_rate_data_item"
+        app:layout_constraintBottom_toTopOf="@id/slope_data_item"
+        app:layout_constraintLeft_toRightOf="@id/sport_summary_abstract"/>
+
+    <include
+        android:id="@+id/slope_data_item"
+        layout="@layout/summary_item_layout"
+        android:layout_width="@dimen/x233"
+        android:layout_height="@dimen/x197"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        app:layout_constraintTop_toBottomOf="@id/speed_data_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/data_sync"/>
+
+    <include
+        android:id="@+id/sport_summary_data"
+        layout="@layout/sport_summary_data_layout"
+        android:layout_width="@dimen/x469"
+        android:layout_height="@dimen/x632"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/speed_data_item"
+        app:layout_constraintRight_toLeftOf="@id/summary_finish_ib"/>
+
+</android.support.constraint.ConstraintLayout>

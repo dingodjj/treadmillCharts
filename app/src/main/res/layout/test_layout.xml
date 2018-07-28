@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/radial_gradient_bg"
+    android:id="@+id/root_viewgroup">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/add_widget_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加小部件"/>
+
+        <Button
+            android:id="@+id/last_song_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一首"/>
+
+        <Button
+            android:id="@+id/start_or_pause_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停"/>
+
+        <Button
+            android:id="@+id/next_song_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一首"/>
+
+    </LinearLayout>
+
+    <com.nl.treadmilllauncher.view.StepArcView
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
+
+</LinearLayout>

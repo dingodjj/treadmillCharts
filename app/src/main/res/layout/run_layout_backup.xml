@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_viewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/setting_ib"
+        android:layout_width="@dimen/x25"
+        android:layout_height="@dimen/x25"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x15"
+        android:background="@mipmap/setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/shorten_ib"
+        android:layout_width="@dimen/x25"
+        android:layout_height="@dimen/x25"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x15"
+        android:background="@mipmap/shorten"
+        app:layout_constraintStart_toEndOf="@id/setting_ib"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/x15"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@android:color/transparent"
+            android:text=" 2018.01.18"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/week_day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@android:color/transparent"
+            android:text=" 星期四"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/x20"/>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@android:color/transparent"
+            android:text=" 21:19"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/x20"/>
+
+        <ImageButton
+            android:id="@+id/wifi_ib"
+            android:layout_width="38px"
+            android:layout_height="28.6px"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@mipmap/wifi"/>
+
+        <ImageButton
+            android:id="@+id/system_msg_ib"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x21"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@mipmap/system_msg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottom_panel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageButton
+            android:id="@+id/slope_up_ib"
+            android:layout_width="@dimen/x61"
+            android:layout_height="@dimen/x48"
+            android:background="@mipmap/up" />
+
+        <com.nl.treadmilllauncher.view.StepArcView
+            android:id="@+id/slope_stepArcView"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/x240"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:current_progress="5.5"
+            app:direction="anticlockwise"
+            app:end_color="#FFFF9400"
+            app:max_progress="10"
+            app:panel_title_cn="坡度"
+            app:panel_title_en="SLOPE"
+            app:start_color="#FFFF5B5B" />
+
+        <ImageButton
+            android:id="@+id/slope_down_ib"
+            android:layout_width="@dimen/x61"
+            android:layout_height="@dimen/x48"
+            android:background="@mipmap/down" />
+
+    </LinearLayout>
+
+    <com.nl.treadmilllauncher.view.CompassScaleView
+        android:id="@+id/compassScaleView"
+        android:layout_width="@dimen/x500"
+        android:layout_height="@dimen/x500"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottom_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageButton
+            android:id="@+id/speed_up_ib"
+            android:layout_width="@dimen/x61"
+            android:layout_height="@dimen/x48"
+            android:background="@mipmap/up" />
+
+        <com.nl.treadmilllauncher.view.StepArcView
+            android:id="@+id/speed_stepArcView"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/x240"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            app:current_progress="8.8"
+            app:direction="clockwise"
+            app:max_progress="12"
+            app:panel_title_cn="速度"
+            app:panel_title_en="SPEED"
+            app:start_color="#FF89FFA3"
+            app:end_color="#FF00ACFF" />
+
+        <ImageButton
+            android:id="@+id/speed_down_ib"
+            android:layout_width="@dimen/x61"
+            android:layout_height="@dimen/x48"
+            android:background="@mipmap/down" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x73"
+        app:layout_constraintBottom_toTopOf="@id/bottom_line_view"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#FFFFFFFF"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/bg_thumbnail_tv"
+                android:layout_width="@dimen/x167"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/select_tag"
+                android:gravity="center"
+                android:paddingRight="3dp"
+                android:text="场景：城市"
+                android:textColor="#FFFFFFFF"
+                android:textSize="@dimen/x22" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配速"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x23" />
+
+                <TextView
+                    android:id="@+id/speed_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.9"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x33"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MIN/KM"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x20"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/x37"
+                android:background="#FFFFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时长"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x23" />
+
+                <TextView
+                    android:id="@+id/duration_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:39:28"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x34"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/x37"
+                android:background="#FFFFFFFF" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="卡路里"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x23" />
+
+                <TextView
+                    android:id="@+id/cal_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="439"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x34"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kcal"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="@dimen/x20"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_control"
+                android:layout_width="@dimen/x267"
+                android:layout_height="@dimen/x70"
+                android:orientation="horizontal"
+                android:background="@mipmap/player">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottom_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/gradient_seprarer_line"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

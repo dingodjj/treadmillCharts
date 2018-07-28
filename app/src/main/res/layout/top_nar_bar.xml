@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0Dffffff"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_ib"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x23"
+            android:layout_marginStart="@dimen/x28"
+            android:background="@mipmap/back_arrow" />
+
+        <LinearLayout
+            android:id="@+id/setting_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/x42">
+
+            <ImageButton
+                android:id="@+id/setting_ib"
+                android:layout_width="@dimen/x23"
+                android:layout_height="@dimen/x23"
+                android:background="@mipmap/setting" />
+
+            <TextView
+                android:id="@+id/setting_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x11"
+                android:text="设置"
+                android:textSize="@dimen/x20"
+                android:gravity="center"
+                android:textColor="@color/nar_text_color"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|end">
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:text=" 2018.01.18"
+            android:textColor="@color/nar_text_color"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/week_day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@android:color/transparent"
+            android:text=" 星期四"
+            android:textColor="@color/nar_text_color"
+            android:textSize="@dimen/x20"/>
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x23"
+            android:text=" 21:19"
+            android:textColor="@color/nar_text_color"
+            android:textSize="@dimen/x20"/>
+
+        <ImageButton
+            android:id="@+id/wifi_ib"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x19"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@mipmap/wifi"/>
+
+        <ImageButton
+            android:id="@+id/system_msg_ib"
+            android:layout_width="@dimen/x28"
+            android:layout_height="@dimen/x22"
+            android:layout_marginEnd="@dimen/x35"
+            android:background="@mipmap/system_msg" />
+
+    </LinearLayout>
+
+</LinearLayout>

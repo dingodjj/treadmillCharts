@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x360"
+    android:layout_height="@dimen/x306"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/round_corner_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:text="数据同步区 / Synchro"
+        android:textColor="@color/color_cccccc"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/x13"
+        android:textSize="@dimen/x11"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+    
+    <ImageView
+        android:layout_width="@dimen/x113"
+        android:layout_height="@dimen/x113"
+        android:layout_marginTop="@dimen/x39"
+        android:background="@mipmap/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x37"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/x13"
+        android:text="扫一扫"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/x13"
+        android:text="立即同步运动数据"/>
+
+</LinearLayout>

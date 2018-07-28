@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_viewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.nl.treadmilllauncher.view.RunInfoAnimPanelView
+        android:id="@+id/slope_animView"
+        android:layout_width="@dimen/x157"
+        android:layout_height="@dimen/x157"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/goalModuleCompassView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3333"
+        app:type="slope" />
+
+    <com.nl.treadmilllauncher.view.ModuleCompassView
+        android:id="@+id/goalModuleCompassView"
+        android:layout_width="@dimen/x460"
+        android:layout_height="@dimen/x460"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintVertical_bias="0.1037"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.nl.treadmilllauncher.view.RunInfoAnimPanelView
+        android:id="@+id/speed_animView"
+        android:layout_width="@dimen/x157"
+        android:layout_height="@dimen/x157"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/goalModuleCompassView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3333"
+        app:type="speed" />
+
+    <com.nl.treadmilllauncher.view.WaveIndicatorView
+        android:id="@+id/waveIndicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x160"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.829"/>
+
+    <com.nl.treadmilllauncher.view.InstrumentPanelView
+        android:id="@+id/slope_instrumentPanelView"
+        android:layout_width="@dimen/x353"
+        android:layout_height="@dimen/x182"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/x197"
+        app:current_value="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/time_duration_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0.0353"
+        app:max_value="10"
+        app:txt_cn="坡度"
+        app:txt_en="SLOPE" />
+
+    <TextView
+        android:id="@+id/time_duration_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="10dp"
+        android:text="00:46:56"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/x67"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1"/>
+
+    <com.nl.treadmilllauncher.view.InstrumentPanelView
+        android:id="@+id/speed_instrumentPanelView"
+        android:layout_width="@dimen/x353"
+        android:layout_height="@dimen/x182"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/x197"
+        app:current_value="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/time_duration_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:max_value="10"
+        app:txt_cn="速度"
+        app:txt_en="SPEED" />
+
+</android.support.constraint.ConstraintLayout>

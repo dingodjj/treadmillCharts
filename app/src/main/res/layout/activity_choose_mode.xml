@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radial_gradient_bg"
+    tools:context="com.nl.treadmilllauncher.ui.ChooseModeActivity">
+
+    <include
+        android:id="@+id/top_nar_bar_panel"
+        layout="@layout/top_nar_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48"/>
+
+    <RadioGroup
+        android:id="@+id/choose_mode_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x59"
+        android:layout_marginBottom="@dimen/x63"
+        android:layout_marginStart="@dimen/x39"
+        app:layout_constraintTop_toBottomOf="@id/top_nar_bar_panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <RadioButton
+            android:id="@+id/train_radio_btn"
+            android:layout_width="@dimen/x192"
+            android:layout_height="@dimen/x111"
+            android:background="@drawable/train_mode_selector"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/goal_radio_btn"
+            android:layout_width="@dimen/x192"
+            android:layout_height="@dimen/x111"
+            android:layout_marginTop="@dimen/x112"
+            android:layout_marginBottom="@dimen/x106"
+            android:background="@drawable/goal_mode_selector"
+            android:button="@null" />
+
+        <RadioButton
+            android:id="@+id/phy_test_radio_btn"
+            android:layout_width="@dimen/x192"
+            android:layout_height="@dimen/x111"
+            android:background="@drawable/physical_test_selector"
+            android:button="@null" />
+
+    </RadioGroup>
+
+    <com.nl.treadmilllauncher.view.GradientSeparatorLine
+        android:id="@+id/gradientSeparatorLine"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/x39"
+        android:layout_marginTop="@dimen/x48"
+        app:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/top_nar_bar_panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/choose_mode_radioGroup"/>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/x45"
+        android:layout_marginTop="@dimen/x81"
+        android:paddingRight="@dimen/x40"
+        app:layout_constraintTop_toBottomOf="@id/top_nar_bar_panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gradientSeparatorLine"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

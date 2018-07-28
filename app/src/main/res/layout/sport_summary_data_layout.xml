@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x469"
+    android:layout_height="@dimen/x632"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/data_bg">
+
+    <TextView
+        android:id="@+id/data_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:text="运动数据 / Data"
+        android:textColor="@color/color_cccccc"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/x13"
+        android:textSize="@dimen/x11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@id/data_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+    <com.nl.treadmilllauncher.view.TextProgressbar
+        android:id="@+id/casualness_progressbar"
+        android:layout_width="@dimen/x327"
+        android:layout_height="@dimen/x33"
+        android:layout_marginTop="@dimen/x86"
+        android:layout_marginStart="@dimen/x58"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="80"
+        android:max="100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/warm_up_progressbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.nl.treadmilllauncher.view.TextProgressbar
+        android:id="@+id/warm_up_progressbar"
+        android:layout_width="@dimen/x327"
+        android:layout_height="@dimen/x33"
+        android:layout_marginStart="@dimen/x58"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="56"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/casualness_progressbar"
+        app:layout_constraintBottom_toTopOf="@id/heart_lung_enhancement_progressbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.nl.treadmilllauncher.view.TextProgressbar
+        android:id="@+id/heart_lung_enhancement_progressbar"
+        android:layout_width="@dimen/x327"
+        android:layout_height="@dimen/x33"
+        android:layout_marginStart="@dimen/x58"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="40"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/warm_up_progressbar"
+        app:layout_constraintBottom_toTopOf="@id/fat_combustion_progressbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.nl.treadmilllauncher.view.TextProgressbar
+        android:id="@+id/fat_combustion_progressbar"
+        android:layout_width="@dimen/x327"
+        android:layout_height="@dimen/x33"
+        android:layout_marginStart="@dimen/x58"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="35"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/heart_lung_enhancement_progressbar"
+        app:layout_constraintBottom_toTopOf="@id/lactic_acid_threshold_progressbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.nl.treadmilllauncher.view.TextProgressbar
+        android:id="@+id/lactic_acid_threshold_progressbar"
+        android:layout_width="@dimen/x327"
+        android:layout_height="@dimen/x33"
+        android:layout_marginStart="@dimen/x58"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="27"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/fat_combustion_progressbar"
+        app:layout_constraintBottom_toTopOf="@id/limit_sprint_progressbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.nl.treadmilllauncher.view.TextProgressbar
+        android:id="@+id/limit_sprint_progressbar"
+        android:layout_width="@dimen/x327"
+        android:layout_height="@dimen/x33"
+        android:layout_marginStart="@dimen/x58"
+        android:layout_marginBottom="@dimen/x10"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progress="18"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/lactic_acid_threshold_progressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

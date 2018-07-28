@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_viewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radial_gradient_bg"
+    tools:context="com.nl.treadmilllauncher.MainActivity">
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="@dimen/x213"
+        android:layout_height="@dimen/x213"
+        android:layout_marginTop="@dimen/x42"
+        android:background="@drawable/start_selector_bg"
+        app:layout_constraintBottom_toTopOf="@id/phy_ability_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/goal_btn"
+        android:layout_width="@dimen/x242"
+        android:layout_height="@dimen/x190"
+        android:layout_marginStart="@dimen/x170"
+        android:layout_marginTop="@dimen/x90"
+        android:background="@drawable/goal_selector_bg"
+        app:layout_constraintBottom_toTopOf="@id/waveIndicatorView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/train_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/train_btn"
+        android:layout_width="@dimen/x242"
+        android:layout_height="@dimen/x190"
+        android:layout_marginEnd="@dimen/x170"
+        android:layout_marginTop="@dimen/x90"
+        android:background="@drawable/train_selector_bg"
+        app:layout_constraintBottom_toTopOf="@id/waveIndicatorView"
+        app:layout_constraintLeft_toRightOf="@id/goal_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/phy_ability_btn"
+        android:layout_width="@dimen/x213"
+        android:layout_height="@dimen/x213"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/physical_ability_selector_bg"
+        app:layout_constraintBottom_toTopOf="@id/waveIndicatorView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_btn" />
+
+    <com.nl.treadmilllauncher.view.WaveIndicatorView
+        android:id="@+id/waveIndicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x160"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.829"/>
+
+</android.support.constraint.ConstraintLayout>

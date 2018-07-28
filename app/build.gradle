@@ -1,0 +1,92 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.0'
+    defaultConfig {
+        applicationId "com.nl.treadmilllauncher"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+
+        release {
+            storeFile file("keystore/product.jks")
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+
+        debug {
+            storeFile file("keystore/product.jks")
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true  //是否支持zip
+            shrinkResources true  // 移除无用的resource文件
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false  //是否支持调试
+
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk') && "release".equals(variant.buildType.name)) {
+                        outputFileName = "${variant.applicationId}_${variant.buildType.name}_${variant.versionName}_${buildTime()}.apk"
+                    }
+                }
+            }
+        }
+
+        debug {
+            minifyEnabled true
+            zipAlignEnabled true  //是否支持zip
+            shrinkResources true  // 移除无用的resource文件
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true  //是否支持调试
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        //不要对Lib做preDexing
+        incremental true
+        //开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的。
+        javaMaxHeapSize "4g"     //增加java堆内存大小
+    }
+}
+
+def buildTime() {
+    def df = new SimpleDateFormat("yyyyMMddHHmm")
+    df.setTimeZone(TimeZone.getDefault())
+    return df.format(new Date())
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0-beta5'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.android.support:recyclerview-v7:27.1.0'
+}

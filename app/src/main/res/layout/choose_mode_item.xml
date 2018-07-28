@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/y924"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/round_corner_bg"
+    android:paddingStart="@dimen/x23"
+    android:paddingTop="@dimen/x23"
+    android:paddingBottom="@dimen/x23"
+    android:paddingEnd="@dimen/x39"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/thumnail_pic"
+        android:layout_width="@dimen/x222"
+        android:layout_height="@dimen/x131"/>
+
+    <LinearLayout
+        android:id="@+id/detail_panel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/x33">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/train_category_txt_cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="心肺训练"
+                android:textSize="@dimen/x23"
+                android:textColor="@color/color_white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:layout_marginStart="@dimen/x9"
+                android:layout_marginEnd="@dimen/x7"
+                android:textSize="@dimen/x27"
+                android:textColor="@color/color_white"/>
+
+            <TextView
+                android:id="@+id/train_category_txt_en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dafsddsafsdf"
+                android:textSize="@dimen/x30"
+                android:textColor="@color/color_white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_gray"
+                android:text="说明："
+                android:textSize="@dimen/x20"/>
+
+            <TextView
+                android:id="@+id/abstract_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_gray"
+                android:text="通过心肺训练达到跑步最佳效果"
+                android:textSize="@dimen/x20"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_gray"
+                android:text="难度："
+                android:textSize="@dimen/x20"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star_iv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x4"
+                    android:src="@mipmap/star_chosen"/>
+
+                <ImageView
+                    android:id="@+id/star_iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x13"
+                    android:src="@mipmap/star_chosen"/>
+
+                <ImageView
+                    android:id="@+id/star_iv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x13"
+                    android:src="@mipmap/star_unchosen"/>
+
+                <ImageView
+                    android:id="@+id/star_iv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x13"
+                    android:src="@mipmap/star_unchosen"/>
+
+                <ImageView
+                    android:id="@+id/star_iv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x13"
+                    android:src="@mipmap/star_unchosen"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <com.nl.treadmilllauncher.view.GradientSeparatorLine
+        android:id="@+id/sepatator_line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        app:orientation="vertical"
+        android:layout_marginEnd="@dimen/x42"/>
+    
+    <ImageButton
+        android:id="@+id/enter_ib"
+        android:layout_width="@dimen/x21"
+        android:layout_height="@dimen/x27"
+        android:background="@mipmap/enter"/>
+    
+</LinearLayout>

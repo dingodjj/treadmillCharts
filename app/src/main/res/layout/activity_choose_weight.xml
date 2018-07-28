@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_viewgroup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radial_gradient_bg"
+    tools:context="com.nl.treadmilllauncher.ui.ChooseWeightActivity">
+
+    <include
+        android:id="@+id/top_nar_bar_panel"
+        layout="@layout/top_nar_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48"/>
+
+    <com.nl.treadmilllauncher.view.StringScrollPicker
+        android:id="@+id/weight_picker_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x198"
+        android:layout_marginStart="@dimen/x223"
+        android:layout_marginEnd="@dimen/x223"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374"
+        app:spv_orientation="horizontal"
+        app:spv_visible_item_count="5"
+        app:spv_start_color="#ffffffff"
+        app:spv_mid_color="#80ffffff"
+        app:spv_end_color="#0fffffff"
+        app:spv_max_text_size="@dimen/x173"
+        app:spv_min_text_size="@dimen/x106"
+        app:spv_max_line_width="@dimen/x240"
+        app:spv_alignment="center"/>
+
+    <com.nl.treadmilllauncher.view.WaveIndicatorView
+        android:id="@+id/waveIndicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x160"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.829"/>
+
+    <ImageButton
+        android:id="@+id/last_step_ib"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x100"
+        android:layout_marginStart="@dimen/x133"
+        android:background="@null"
+        android:src="@mipmap/choose_weight_last_step"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
+
+    <ImageButton
+        android:id="@+id/start_ib"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x100"
+        android:layout_marginEnd="@dimen/x133"
+        android:background="@null"
+        android:src="@mipmap/choose_weight_start"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925" />
+
+</android.support.constraint.ConstraintLayout>
